@@ -1,22 +1,22 @@
-{%set name = "Flask-Migrate" %}
-{%set version = "2.0.3" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "331f1facf93712b6a3067eac382e645b1ef09e9a6d34da447acb6a3c293afd80" %}
-{%set build_num = "0" %}
+{% set name = "Flask-Migrate" %}
+{% set version = "2.0.4" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "1e6dc83bed93aef9a4791d5daaa03b186c8ef5d96c99c7d88166da683c86e42d" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
   preserve_egg_dir: True
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -36,12 +36,13 @@ test:
     - flask_migrate
 
 about:
-  home: http://github.com/miguelgrinberg/flask-migrate/
-  license: MIT
+  home: https://github.com/miguelgrinberg/flask-migrate/
   license_file: LICENSE
+  license: MIT
   license_family: MIT
   summary: 'SQLAlchemy database migrations for Flask applications using Alembic'
-  dev_url: https://flask-migrate.readthedocs.io/en/latest/
+  dev_url: https://github.com/miguelgrinberg/flask-migrate/
+  doc_url: https://flask-migrate.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
