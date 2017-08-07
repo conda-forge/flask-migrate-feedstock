@@ -2,7 +2,7 @@
 {% set version = "2.1.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "716d5b68eec53821f80b3fbcb0fd60baed0cb0e320abb30289e83217668cef7f" %}
+{% set hash = "716d5b68eec53821f80b3fbcb0fd60baed0cb0e320abb30289e83217668cef7f" %}
 {% set build = 0 %}
 
 package:
@@ -12,7 +12,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   preserve_egg_dir: True
