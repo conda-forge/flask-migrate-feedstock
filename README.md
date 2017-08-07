@@ -1,7 +1,7 @@
 About flask-migrate
 ===================
 
-Home: http://github.com/miguelgrinberg/flask-migrate/
+Home: https://github.com/miguelgrinberg/flask-migrate/
 
 Package license: MIT
 
