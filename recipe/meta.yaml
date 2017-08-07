@@ -1,8 +1,8 @@
 {% set name = "Flask-Migrate" %}
-{% set version = "2.0.4" %}
+{% set version = "2.1.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "1e6dc83bed93aef9a4791d5daaa03b186c8ef5d96c99c7d88166da683c86e42d" %}
+{% set hash = "716d5b68eec53821f80b3fbcb0fd60baed0cb0e320abb30289e83217668cef7f" %}
 {% set build = 0 %}
 
 package:
@@ -12,7 +12,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   preserve_egg_dir: True
@@ -29,7 +29,6 @@ requirements:
     - flask >=0.9
     - flask-sqlalchemy >=1.0
     - alembic >=0.6
-    - flask-script >=0.6
 
 test:
   imports:
