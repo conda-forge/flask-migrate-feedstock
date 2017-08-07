@@ -29,7 +29,6 @@ requirements:
     - flask >=0.9
     - flask-sqlalchemy >=1.0
     - alembic >=0.6
-    - flask-script >=0.6
 
 test:
   imports:
