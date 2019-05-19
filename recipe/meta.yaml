@@ -1,8 +1,8 @@
 {% set name = "Flask-Migrate" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c" %}
+{% set hash = "7dd4884825f19ffb2a6e6903c097674b0f6b7e826ec04f52a07fec477a711631" %}
 {% set build = 0 %}
 
 package:
