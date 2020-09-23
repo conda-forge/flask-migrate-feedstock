@@ -1,9 +1,8 @@
 {% set name = "Flask-Migrate" %}
 {% set version = "2.4.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +11,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   preserve_egg_dir: True
