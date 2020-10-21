@@ -1,8 +1,8 @@
 {% set name = "Flask-Migrate" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.3" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c" %}
-{% set build = 1 %}
+{% set hash = "a69d508c2e09d289f6e55a417b3b8c7bfe70e640f53d2d9deb0d056a384f37ee" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  preserve_egg_dir: True
+  preserve_egg_dir: true
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -38,7 +38,7 @@ about:
   license_file: LICENSE
   license: MIT
   license_family: MIT
-  summary: 'SQLAlchemy database migrations for Flask applications using Alembic'
+  summary: SQLAlchemy database migrations for Flask applications using Alembic
   dev_url: https://github.com/miguelgrinberg/flask-migrate/
   doc_url: https://flask-migrate.readthedocs.io/en/latest/
 
