@@ -2,7 +2,6 @@
 {% set version = "2.4.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash = "a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c" %}
-{% set build = 2 %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +14,8 @@ source:
 
 build:
   preserve_egg_dir: True
-  number: {{ build }}
+  noarch: python
+  number: 2
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
