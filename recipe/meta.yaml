@@ -1,35 +1,35 @@
 {% set name = "Flask-Migrate" %}
 {% set version = "2.4.0" %}
-{% set bundle = "tar.gz" %}
 {% set hash = "a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c" %}
-{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a361578cb829681f860e4de5ed2c48886264512f0c16144e404c36ddc95ab49c
 
 build:
-  preserve_egg_dir: True
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  number: 2
+  script: pip install -vv .
 
 requirements:
   build:
-    - python
-    - setuptools
-
+    - python >=2.7
+    - pip
   run:
-    - python
+    - python >=2.7
     - flask >=0.9
     - flask-sqlalchemy >=1.0
     - alembic >=0.6
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - flask_migrate
 
@@ -44,4 +44,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - pmlandwehr
+    - jan-janssen
+    - xhochy
