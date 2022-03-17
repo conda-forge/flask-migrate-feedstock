@@ -1,5 +1,5 @@
 {% set name = "Flask-Migrate" %}
-{% set version = "2.5.2" %}
+{% set version = "2.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a96ff1875a49a40bd3e8ac04fce73fdb0870b9211e6168608cbafa4eb839d502
+  sha256: a69d508c2e09d289f6e55a417b3b8c7bfe70e640f53d2d9deb0d056a384f37ee
 
 build:
   noarch: python
