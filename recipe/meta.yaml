@@ -1,17 +1,17 @@
 {% set name = "Flask-Migrate" %}
-{% set version = "4.0.7" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dff7dd25113c210b069af280ea713b883f3840c1e3455274745d7355778c8622
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  sha256: 1a336b06eb2c3ace005f5f2ded8641d534c18798d64061f6ff11f79e1434126d
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
